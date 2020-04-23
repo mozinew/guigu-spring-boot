@@ -1,0 +1,18 @@
+server:
+  port: 80
+
+person:
+  name: zhangsan
+  age: 23
+  boss: false
+  birthday: 2020/4/23
+  addresses:
+    work: beijing
+    life: shanghai
+  nicknames:
+    - zhangsan
+    - zhs
+    - zs
+  dog:
+    name: wangwang
+    age: 23

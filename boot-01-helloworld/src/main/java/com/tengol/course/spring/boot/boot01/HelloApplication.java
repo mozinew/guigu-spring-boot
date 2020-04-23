@@ -1,8 +1,9 @@
 package com.tengol.course.spring.boot.boot01;
 
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 /**
  * HelloApplication
@@ -10,14 +11,12 @@ import org.springframework.context.annotation.Bean;
  * @author dongrui
  * @date 2020/4/14 13:16
  */
+@Slf4j
 @SpringBootApplication
+@AllArgsConstructor
 public class HelloApplication {
     public static void main(String[] args) {
         SpringApplication.run(HelloApplication.class, args);
-    }
-
-    @Bean
-    public String hello(){
-        return "hello world";
+        log.info("HelloApplication start successfully ......");
     }
 }
