@@ -6,7 +6,7 @@ person:
   age: 23
   boss: false
   birthday: 2020/4/23
-  email: zhangsan#126.com
+  email: zhangsan@126.com
   addresses:
     work: beijing
     life: shanghai

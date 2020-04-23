@@ -1,6 +1,7 @@
 package com.tengol.course.spring.boot.boot01.web;
 
 import com.alibaba.fastjson.JSON;
+import com.tengol.course.spring.boot.boot01.config.MyDatasourceProperties;
 import com.tengol.course.spring.boot.boot01.config.PersonProperties;
 import com.tengol.course.spring.boot.boot01.handler.CommandHandler;
 import lombok.AllArgsConstructor;
@@ -29,6 +30,7 @@ public class HelloController {
     private List<CommandHandler> chs;
     private Map<String,CommandHandler> chm;
     private PersonProperties personProperties;
+    private MyDatasourceProperties myDatasourceProperties;
 
     @GetMapping("/test")
     public void test(){
@@ -46,7 +48,11 @@ public class HelloController {
     @GetMapping("/prop")
     public ResponseEntity<PersonProperties> getPersonProperties(){
         log.info("== personProperties : {}", JSON.toJSONString(personProperties));
-
         return ResponseEntity.ok(personProperties);
+    }
+
+    @GetMapping("/source")
+    public ResponseEntity<MyDatasourceProperties> getMyDatasourceProperties(){
+        return ResponseEntity.ok(myDatasourceProperties);
     }
 }
